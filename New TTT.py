@@ -36,14 +36,14 @@ class TTTBoard:
         if self.currentPlayer == 'o':
             pygame.draw.circle(screen, circleColour,
                               (boardPositions[position][0]+thirdWidth/2,boardPositions[position][1]+thirdWidth/2),
-                              (thirdWidth/2) - 15, 3)
+                              (thirdWidth/2) - 15, 5)
         else:
             pygame.draw.line(screen, crossColour, 
                             (boardPositions[position][0]+20,boardPositions[position][1]+20),
-                            (boardPositions[position][0]+thirdWidth-20,boardPositions[position][1]+thirdWidth-20), 4)
+                            (boardPositions[position][0]+thirdWidth-20,boardPositions[position][1]+thirdWidth-20), 6)
             pygame.draw.line(screen, crossColour,
                             (boardPositions[position][0]+20, boardPositions[position][1]+thirdWidth-20),
-                            (boardPositions[position][0]+thirdWidth-20,boardPositions[position][1]+20),4)
+                            (boardPositions[position][0]+thirdWidth-20,boardPositions[position][1]+20),6)
         self.currentPlayer, self.nextPlayer = self.nextPlayer, self.currentPlayer
         pygame.display.flip()
 
